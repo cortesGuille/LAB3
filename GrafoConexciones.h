@@ -15,7 +15,7 @@ struct Nodo { //Estos son los parametros de los vertices
                       // se rellena -1 para el tipo que no es
 };
 
-struct Arco { // Estos son los parametros de las Aritas
+struct Arco { // Estos son los parametros de las Aritas son los parametros dados en "conexiones.csv"
     string origen;
     string destino;
     int velocidad;
@@ -25,16 +25,31 @@ class GrafoConexiones {
     
     public:
     map<string, Nodo> nodos; //lista de adyacencia
-    vector<Arco> arcos;
-
+    vector<Arco> arcos; //lista de caminos
+    /**
+    *Funcion que agregra los todos los vectores al grafo , En la seccion int id se le pone -1 cuando no es el tipo correspondiente
+    *@param string id 
+    *@param string tipo
+    *@param int idCliente
+    *@param int idServidor
+    */
     void agregarNodo(const string& id, string tipo, int idcliente = -1, int idservidor = -1) {
         nodos[id] = {id, tipo, idcliente, idservidor};
     }
-
+    /**
+     * Funcion que agrega los arcos, esta viene dada en conexiones.csv
+     * @param string origen
+     * @param string destino
+     * @param int velocidad
+     * @param int distancia
+    */
     void agregarArco(const string& origen, const string& destino, int velocidad, int distancia) {
         arcos.push_back({origen, destino, velocidad, distancia});
     }
-
+    /**
+     * Imprime el grafo
+     * 
+    */
     void imprimirGrafo() {
          
       

@@ -4,6 +4,8 @@
 ## Como Funciona el Grafo
 Primero con el Archivo "Servidores.csv" se le asignan los vertices que tiene el grafo, el en el vertice esta designado si es pertenecente a un cliente o servidor. Luego se pasa a leer el "conexciones.csv" que es el que va a establecer las aristas y por tanto las relaciones que tienen cada una de ellas. 
 
+<img src= https://upload.wikimedia.org/wikipedia/commons/6/6f/Listas_de_adyacencia.jpg alt="Imagen como se guardan los datos del grafo">
+
 #### En el Vertice tienen las siguientes variables :
 
    - string id  
